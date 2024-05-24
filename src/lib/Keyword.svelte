@@ -1,0 +1,13 @@
+<script lang="ts">
+
+    let currentElement: HTMLElement;
+    function destroy(): void {
+        currentElement.remove();
+    }
+
+</script>
+
+<fieldset role="group" bind:this={ currentElement }>
+    <input name="keyword" placeholder="keyword" />
+    <button on:click={ destroy }>delete</button>
+</fieldset>
