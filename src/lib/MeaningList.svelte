@@ -3,13 +3,13 @@
     import { onMount } from 'svelte';
     import Meaning from "./Meaning.svelte";
     import type { Synsets, SynsetRow } from '$lib/db';
+    export let keywords: Array<string>;
     export let synsets: Synsets;
 
     onMount(() => {
         let fieldSet: HTMLElement = document.getElementById("field-set") as HTMLElement;
-        console.log("synsets")
-        console.log(synsets)
-        Object.entries(synsets).forEach(([keyword, keywordSynsets]) => {
+        keywords.forEach(keyword => {
+            let keywordSynsets: Array<SynsetRow> = synsets[keyword];
             let props = {keyword: keyword, keywordSynsets: keywordSynsets}
             let _meaning: Meaning = new Meaning({target: fieldSet, props: props});
         });

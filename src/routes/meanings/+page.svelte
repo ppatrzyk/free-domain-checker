@@ -8,4 +8,4 @@
 </script>
 
 <h1>Step 2: choose meaning</h1>
-<MeaningList synsets={ data.synsets } />
+<MeaningList keywords={ data.keywords } synsets={ data.synsets } />

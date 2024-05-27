@@ -7,4 +7,4 @@
 </script>
 
 <h1>Step 3: possibilities listing</h1>
-<CombinationList terms={ data.terms } />
+<CombinationList synsetids={ data.synsetids } terms={ data.terms } />
