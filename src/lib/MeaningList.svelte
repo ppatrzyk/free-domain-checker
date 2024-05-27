@@ -2,12 +2,15 @@
 
     import { onMount } from 'svelte';
     import Meaning from "./Meaning.svelte";
-    export let keywordDefs: Record<string, Array<string>>;
+    import type { Synsets, SynsetRow } from '$lib/db';
+    export let synsets: Synsets;
 
     onMount(() => {
         let fieldSet: HTMLElement = document.getElementById("field-set") as HTMLElement;
-        Object.entries(keywordDefs).forEach(([keyword, meanings]) => {
-            let props = {keyword: keyword, meanings: meanings}
+        console.log("synsets")
+        console.log(synsets)
+        Object.entries(synsets).forEach(([keyword, keywordSynsets]) => {
+            let props = {keyword: keyword, keywordSynsets: keywordSynsets}
             let _meaning: Meaning = new Meaning({target: fieldSet, props: props});
         });
 	});

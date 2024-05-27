@@ -1,6 +1,9 @@
 <script lang="ts">
-    export let keyword;
-    export let meanings;
+    import type { SynsetRow } from "./db";
+
+    export let keyword: string;
+    export let keywordSynsets: Array<SynsetRow>;
+
 </script>
 
 <label for={ keyword }>
@@ -9,8 +12,8 @@
         <option selected disabled value="">
             Select desired meaning
         </option>
-        {#each meanings as meaning}
-        <option value={ meaning }>{ meaning }</option>
+        {#each keywordSynsets as synset}
+        <option value={ synset.synsetid }>{ synset.definition }</option>
         {/each}
     </select>
 </label>

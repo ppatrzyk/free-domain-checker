@@ -7,4 +7,4 @@
 </script>
 
 <h1>Step 3: possibilities listing</h1>
-<CombinationList keywordSyns={ data.keywordSyns } />
+<CombinationList terms={ data.terms } />
