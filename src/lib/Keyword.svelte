@@ -9,5 +9,5 @@
 
 <fieldset role="group" bind:this={ currentElement }>
     <input name="keyword" placeholder="keyword" required minlength="1" />
-    <button on:click={ destroy }>delete</button>
+    <button class="secondary" on:click={ destroy }>delete</button>
 </fieldset>

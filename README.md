@@ -1,10 +1,12 @@
 # free-domain-checker
 
-description todo
+SvelteKit application that generates possible domain names from synonyms of user-provided keywords and checks if they are registered or not.
 
 ## Docker
 
-todo
+```
+docker run -d -p 3000:3000 pieca/free-domain-checker:0.1
+```
 
 ## local dev
 
@@ -14,6 +16,12 @@ todo
 
 ```
 DB=<sqlite_file_location> npm run dev
+```
+
+3. build docker
+
+```
+docker build . -t pieca/free-domain-checker:0.1
 ```
 
 # Acknowledgements

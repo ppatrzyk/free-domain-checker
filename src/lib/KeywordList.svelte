@@ -8,15 +8,23 @@
 
 </script>
 
-<button on:click={ addKeyword }>
-    Add keyword
-</button>
+<style>
+    .keyword {
+        width: 100%;
+    }
+</style>
 
 <form action="/meanings">
     <fieldset id="field-set">
         <Keyword/>
     </fieldset>
 
-    <input type="submit" value="Proceed"/>
-
+    <div class="grid">
+        <div>
+            <button class="keyword secondary" on:click={ addKeyword }>Add keyword</button>
+        </div>
+        <div>
+            <button class="keyword primary" type="submit" value="Proceed">Proceed</button>
+        </div>
+    </div>
 </form>
