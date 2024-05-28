@@ -3,7 +3,7 @@ import groupBy from "core-js/actual/array/group-by";
 import { open } from 'sqlite'
 import sqlite3 from 'sqlite3'
 
-let dbPath: string = "/home/piotr/Downloads/sqlite-31.db";
+let dbPath: string = process.env.DB as string;
 let db = await open<sqlite3.Database, sqlite3.Statement>({
     driver: sqlite3.Database,
     filename: dbPath,

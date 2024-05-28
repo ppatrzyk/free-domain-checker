@@ -3,6 +3,17 @@
     import "@picocss/pico";
 </script>
 
-<main class="container">
+<style>
+    #main {
+        max-width: 1024px;
+    }
+</style>
+
+<main id="main" class="container">
+    <nav>
+        <ul>
+            <li><strong><a href="/">Home</a></strong></li>
+        </ul>
+    </nav>
     <slot></slot>
 </main>

@@ -37,6 +37,14 @@
 
 </script>
 
-<ul id="combinations">
+<table>
+    <thead>
+        <tr>
+            <th scope="col">Domain</th>
+            <th scope="col">Availability</th>
+        </tr>
+    </thead>
+    <tbody id="combinations">
 
-</ul>
+    </tbody>
+</table>

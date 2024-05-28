@@ -6,5 +6,5 @@
 
 </script>
 
-<h1>Step 3: possibilities listing</h1>
+<h1>Step 3: domain possibilities</h1>
 <CombinationList synsetids={ data.synsetids } terms={ data.terms } />
