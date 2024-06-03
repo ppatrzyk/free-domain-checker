@@ -1,6 +1,6 @@
 <script lang="ts">
     
-    import MeaningList from "$lib/MeaningList.svelte";
+    import MeaningList from "$lib/components/MeaningList.svelte";
 
     /** @type {import('./$types').PageData} */
 	export let data;

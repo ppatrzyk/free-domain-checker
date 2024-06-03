@@ -1,8 +1,9 @@
 <script lang="ts">
     import Keyword from "./Keyword.svelte";
 
+    let fieldSet: HTMLElement;
+
     function addKeyword(): void {
-        let fieldSet: HTMLElement = document.getElementById("field-set") as HTMLElement;
         let _keyword: Keyword = new Keyword({target: fieldSet});
     }
 
@@ -15,7 +16,7 @@
 </style>
 
 <form action="/meanings">
-    <fieldset id="field-set">
+    <fieldset id="field-set" bind:this={ fieldSet }>
         <Keyword/>
     </fieldset>
 

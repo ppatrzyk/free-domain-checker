@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
 
     export let url;
+    let urlCell: HTMLElement;
     let resultCell: HTMLElement;
 
     async function checkWhois(url:string) {
@@ -23,6 +24,10 @@
         result.innerText = content;
         resultCell.setAttribute("aria-busy", "false");
         resultCell.replaceChildren(result);
+        if (content !== "free") {
+            urlCell.style.setProperty('color', 'rgb(200, 200, 200)');
+            resultCell.style.setProperty('color', 'rgb(200, 200, 200)');
+        }
     }
 
     onMount(() => {
@@ -31,6 +36,6 @@
 </script>
 
 <tr>
-    <th scope="row">{ url }</th>
+    <th scope="row" bind:this={ urlCell } >{ url }</th>
     <td aria-busy="true" bind:this={ resultCell } >Checking...</td>
 </tr>

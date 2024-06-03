@@ -6,8 +6,9 @@
     export let keywords: Array<string>;
     export let synsets: Synsets;
 
+    let fieldSet: HTMLElement;
+
     onMount(() => {
-        let fieldSet: HTMLElement = document.getElementById("field-set") as HTMLElement;
         keywords.forEach(keyword => {
             let keywordSynsets: Array<SynsetRow> = synsets[keyword];
             let props = {keyword: keyword, keywordSynsets: keywordSynsets}
@@ -18,7 +19,7 @@
 </script>
 
 <form action="/combinations">
-    <fieldset id="field-set">
+    <fieldset id="field-set" bind:this={ fieldSet }>
         
     </fieldset>
 

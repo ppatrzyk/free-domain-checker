@@ -1,6 +1,6 @@
 <script lang="ts">
     
-    import KeywordList from "$lib/KeywordList.svelte";
+    import KeywordList from "$lib/components/KeywordList.svelte";
 
 </script>
 

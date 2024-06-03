@@ -5,7 +5,7 @@ SvelteKit application that generates possible domain names from synonyms of user
 ## Docker
 
 ```
-docker run -d -p 3000:3000 pieca/free-domain-checker:0.1
+docker run -d -p 3000:3000 pieca/free-domain-checker:0.2
 ```
 
 ## local dev
@@ -21,10 +21,14 @@ DB=<sqlite_file_location> npm run dev
 3. build docker
 
 ```
-docker build . -t pieca/free-domain-checker:0.1
+docker build . -t pieca/free-domain-checker:0.2
 ```
 
-# Acknowledgements
+## App screenshot
+
+![screenshot](screenshot.png)
+
+## Acknowledgements
 
 For registrered domains the app uses free [Scraper Run Whois API](https://scraper.run/api.html)
 

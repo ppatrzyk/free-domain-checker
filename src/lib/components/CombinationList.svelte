@@ -6,6 +6,8 @@
     export let terms: Terms;
     export let synsetids: Array<number>;
 
+    let combinationsUl: HTMLElement;
+
     // https://stackoverflow.com/a/57015870
     function combine([head, ...[headTail, ...tailTail]]) {
         if (!headTail) return head
@@ -16,7 +18,6 @@
     }
 
     onMount(() => {
-        let combinationsUl: HTMLElement = document.getElementById("combinations") as HTMLElement;
         // todo how to maintain ordering
         let combineParam: Array<Array<string>> = [];
         synsetids.forEach(synsetid => {
@@ -44,7 +45,7 @@
             <th scope="col">Availability</th>
         </tr>
     </thead>
-    <tbody id="combinations">
+    <tbody id="combinations" bind:this={ combinationsUl }>
 
     </tbody>
 </table>

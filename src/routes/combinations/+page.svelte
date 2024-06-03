@@ -1,5 +1,5 @@
 <script lang="ts">
-    import CombinationList from "$lib/CombinationList.svelte";
+    import CombinationList from "$lib/components/CombinationList.svelte";
 
     /** @type {import('./$types').PageData} */
 	export let data;
